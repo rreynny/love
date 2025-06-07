@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAHA I KNOWW MWAHH LOPYUU!</title>
+    <link rel="stylesheet" href="./yes_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header_text">HAHA I KNOWW MWAHH LOPYUU!</h1>
+        <div class="gif_container">
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdDFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif">
+        </div>
+    </div>
+
+    <!-- Musik -->
+    <audio autoplay loop hidden>
+        <source src="laguku.mp3" type="audio/mpeg">
+        Browser kamu tidak mendukung audio tag.
+    </audio>
+
+    <!-- Love terbang 💖 -->
+    <div class="love-container"></div>
+
+    <script>
+        function createLove() {
+            const love = document.createElement("div");
+            love.className = "love";
+            love.innerText = "💖";
+            love.style.left = Math.random() * 100 + "vw";
+            love.style.animationDuration = (Math.random() * 2 + 3) + "s";
+            document.querySelector(".love-container").appendChild(love);
+
+            setTimeout(() => {
+                love.remove();
+            }, 5000);
+        }
+
+        setInterval(createLove, 300);
+    </script>
+</body>
+</html>
